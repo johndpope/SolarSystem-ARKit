@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SfF-Y9-Tyd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SSAR_CameraAR-->
+        <scene sceneID="pJT-vz-sSD">
+            <objects>
+                <viewController storyboardIdentifier="SSAR_CameraARView" title="SSAR_CameraAR" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SfF-Y9-Tyd" customClass="SSAR_CameraARView" customModule="SolarSystem_AR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y0P-sC-YV9"/>
+                        <viewControllerLayoutGuide type="bottom" id="aEx-wd-auq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="azf-H5-wY3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lnd-Wh-jop">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tF7-fn-3sj">
+                                <rect key="frame" x="15" y="587" width="345" height="60"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="DIu-H5-jKY">
+                                    <rect key="frame" x="0.0" y="0.0" width="345" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="CNa-We-kHp">
+                                            <rect key="frame" x="0.0" y="0.0" width="345" height="60"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xM-ci-oPB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="0xM-ci-oPB" secondAttribute="height" multiplier="1:1" id="OYc-TN-QMA"/>
+                                                    </constraints>
+                                                    <state key="normal" image="trash_icon"/>
+                                                    <connections>
+                                                        <action selector="resetExperience:" destination="SfF-Y9-Tyd" eventType="touchUpInside" id="cvi-2V-RgA"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEc-CT-jOG">
+                                                    <rect key="frame" x="142.5" y="0.0" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="EEc-CT-jOG" secondAttribute="height" multiplier="1:1" id="HcP-GH-ZSG"/>
+                                                    </constraints>
+                                                    <state key="normal" image="camera_icon"/>
+                                                    <connections>
+                                                        <action selector="screenCapture:" destination="SfF-Y9-Tyd" eventType="touchUpInside" id="LQF-uA-1Xh"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43V-lf-7FN">
+                                                    <rect key="frame" x="285" y="0.0" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="43V-lf-7FN" secondAttribute="height" multiplier="1:1" id="pqy-U9-gWa"/>
+                                                    </constraints>
+                                                    <state key="normal" image="planet_icon"/>
+                                                    <connections>
+                                                        <action selector="showEntitiesTable:" destination="SfF-Y9-Tyd" eventType="touchUpInside" id="Jj1-o7-HSq"/>
+                                                    </connections>
+                                                </button>
+                                                <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wGR-MT-5a0">
+                                                    <rect key="frame" x="345" y="0.0" width="0.0" height="60"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </tableView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="v0R-YA-XAJ"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="CNa-We-kHp" secondAttribute="trailing" id="6a8-Va-HQx"/>
+                                        <constraint firstItem="CNa-We-kHp" firstAttribute="leading" secondItem="DIu-H5-jKY" secondAttribute="leading" id="78z-wI-yF3"/>
+                                        <constraint firstItem="CNa-We-kHp" firstAttribute="top" secondItem="DIu-H5-jKY" secondAttribute="top" id="8wG-DP-KkV"/>
+                                        <constraint firstAttribute="bottom" secondItem="CNa-We-kHp" secondAttribute="bottom" id="TIx-xe-Whq"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="Iop-Df-Cq6"/>
+                                </constraints>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="tF7-fn-3sj" secondAttribute="bottom" constant="20" id="6nW-xD-n5U"/>
+                            <constraint firstAttribute="trailing" secondItem="Lnd-Wh-jop" secondAttribute="trailing" id="FA4-26-u5Q"/>
+                            <constraint firstAttribute="bottom" secondItem="Lnd-Wh-jop" secondAttribute="bottom" id="Nql-r9-g0B"/>
+                            <constraint firstAttribute="trailing" secondItem="tF7-fn-3sj" secondAttribute="trailing" constant="15" id="mda-BP-TQI"/>
+                            <constraint firstItem="Lnd-Wh-jop" firstAttribute="top" secondItem="azf-H5-wY3" secondAttribute="top" id="s6e-Sm-7lO"/>
+                            <constraint firstItem="Lnd-Wh-jop" firstAttribute="leading" secondItem="azf-H5-wY3" secondAttribute="leading" id="shw-HU-gD2"/>
+                            <constraint firstItem="tF7-fn-3sj" firstAttribute="leading" secondItem="azf-H5-wY3" secondAttribute="leading" constant="15" id="t6D-Pq-Ey9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="entitiesTableView" destination="wGR-MT-5a0" id="9PC-p3-QPJ"/>
+                        <outlet property="fxBackgroundView" destination="tF7-fn-3sj" id="D9o-ob-AfF"/>
+                        <outlet property="resetExperienceButton" destination="0xM-ci-oPB" id="RCp-H1-WjY"/>
+                        <outlet property="sceneView" destination="Lnd-Wh-jop" id="4IX-Fh-vWQ"/>
+                        <outlet property="screenCaptureButton" destination="EEc-CT-jOG" id="Ows-lv-mkb"/>
+                        <outlet property="showEntitiesTableButton" destination="43V-lf-7FN" id="tZh-sy-may"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L0g-wI-b0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-34.399999999999999" y="-262.21889055472263"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera_icon" width="40" height="40"/>
+        <image name="planet_icon" width="40" height="40"/>
+        <image name="trash_icon" width="40" height="40"/>
+    </resources>
+</document>

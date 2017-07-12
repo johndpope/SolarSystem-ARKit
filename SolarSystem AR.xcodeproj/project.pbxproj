@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC19F6A01F1353CC006EDE7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC19F69F1F1353CC006EDE7E /* AppDelegate.swift */; };
+		CC19F6A71F1353CC006EDE7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC19F6A61F1353CC006EDE7E /* Assets.xcassets */; };
+		CC19F6AA1F1353CC006EDE7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC19F6A81F1353CC006EDE7E /* LaunchScreen.storyboard */; };
+		CC9346371F13870800271567 /* EntityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC9346361F13870800271567 /* EntityCell.xib */; };
+		CCD6F5921F1357B600A81644 /* SSAR_CameraARProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD6F5911F1357B600A81644 /* SSAR_CameraARProtocols.swift */; };
+		CCD6F5941F135A6000A81644 /* CameraARWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD6F5931F135A6000A81644 /* CameraARWireFrame.swift */; };
+		CCD6F5961F135CBA00A81644 /* SSAR_CameraARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD6F5951F135CBA00A81644 /* SSAR_CameraARView.swift */; };
+		CCD6F59A1F13604700A81644 /* SSAR_CameraARPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD6F5991F13604700A81644 /* SSAR_CameraARPresenter.swift */; };
+		CCD6F59C1F1361C700A81644 /* SSAR_CameraARInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD6F59B1F1361C700A81644 /* SSAR_CameraARInteractor.swift */; };
+		CCD6F59E1F13637600A81644 /* SSAR_CameraAR.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCD6F59D1F13637600A81644 /* SSAR_CameraAR.storyboard */; };
+		CCD6F5A01F1366D600A81644 /* StellarEntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD6F59F1F1366D600A81644 /* StellarEntityModel.swift */; };
+		CCD6F5A61F13756D00A81644 /* EntityCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD6F5A51F13756D00A81644 /* EntityCellTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CC19F69C1F1353CC006EDE7E /* SolarSystem AR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SolarSystem AR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC19F69F1F1353CC006EDE7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC19F6A61F1353CC006EDE7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC19F6A91F1353CC006EDE7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC19F6AB1F1353CC006EDE7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC9346361F13870800271567 /* EntityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntityCell.xib; sourceTree = "<group>"; };
+		CCD6F5911F1357B600A81644 /* SSAR_CameraARProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSAR_CameraARProtocols.swift; sourceTree = "<group>"; };
+		CCD6F5931F135A6000A81644 /* CameraARWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraARWireFrame.swift; sourceTree = "<group>"; };
+		CCD6F5951F135CBA00A81644 /* SSAR_CameraARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSAR_CameraARView.swift; sourceTree = "<group>"; };
+		CCD6F5991F13604700A81644 /* SSAR_CameraARPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSAR_CameraARPresenter.swift; sourceTree = "<group>"; };
+		CCD6F59B1F1361C700A81644 /* SSAR_CameraARInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSAR_CameraARInteractor.swift; sourceTree = "<group>"; };
+		CCD6F59D1F13637600A81644 /* SSAR_CameraAR.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SSAR_CameraAR.storyboard; sourceTree = "<group>"; };
+		CCD6F59F1F1366D600A81644 /* StellarEntityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StellarEntityModel.swift; sourceTree = "<group>"; };
+		CCD6F5A51F13756D00A81644 /* EntityCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityCellTableViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC19F6991F1353CC006EDE7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC19F6931F1353CC006EDE7E = {
+			isa = PBXGroup;
+			children = (
+				CC19F69E1F1353CC006EDE7E /* SolarSystem AR */,
+				CC19F69D1F1353CC006EDE7E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC19F69D1F1353CC006EDE7E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC19F69C1F1353CC006EDE7E /* SolarSystem AR.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC19F69E1F1353CC006EDE7E /* SolarSystem AR */ = {
+			isa = PBXGroup;
+			children = (
+				CC19F69F1F1353CC006EDE7E /* AppDelegate.swift */,
+				CC19F6B41F1353F0006EDE7E /* Extensions */,
+				CC19F6B31F1353EB006EDE7E /* Entities */,
+				CC19F6B11F1353E1006EDE7E /* Use Cases */,
+				CC19F6B21F1353E7006EDE7E /* Resources */,
+			);
+			path = "SolarSystem AR";
+			sourceTree = "<group>";
+		};
+		CC19F6B11F1353E1006EDE7E /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+				CC9346381F13936400271567 /* EntitiesDetail */,
+				CC19F6B51F13541D006EDE7E /* CameraAR */,
+			);
+			path = "Use Cases";
+			sourceTree = "<group>";
+		};
+		CC19F6B21F1353E7006EDE7E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CC19F6A61F1353CC006EDE7E /* Assets.xcassets */,
+				CC19F6A81F1353CC006EDE7E /* LaunchScreen.storyboard */,
+				CC19F6AB1F1353CC006EDE7E /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CC19F6B31F1353EB006EDE7E /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CCD6F5A31F136A5400A81644 /* Satellite */,
+				CCD6F5A21F136A4F00A81644 /* Planet */,
+				CCD6F5A11F136A4500A81644 /* Star */,
+				CCD6F59F1F1366D600A81644 /* StellarEntityModel.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		CC19F6B41F1353F0006EDE7E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CC19F6B51F13541D006EDE7E /* CameraAR */ = {
+			isa = PBXGroup;
+			children = (
+				CCD6F5A41F13755000A81644 /* Cells */,
+				CCD6F5901F13579E00A81644 /* Protocols */,
+				CC19F6BA1F13561D006EDE7E /* Presenter */,
+				CC19F6B91F135614006EDE7E /* Interactor */,
+				CC19F6B81F135610006EDE7E /* View */,
+				CC19F6B71F135603006EDE7E /* WireFrame */,
+				CCD6F59D1F13637600A81644 /* SSAR_CameraAR.storyboard */,
+			);
+			path = CameraAR;
+			sourceTree = "<group>";
+		};
+		CC19F6B71F135603006EDE7E /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				CCD6F5931F135A6000A81644 /* CameraARWireFrame.swift */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
+		CC19F6B81F135610006EDE7E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CCD6F5951F135CBA00A81644 /* SSAR_CameraARView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC19F6B91F135614006EDE7E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CCD6F59B1F1361C700A81644 /* SSAR_CameraARInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CC19F6BA1F13561D006EDE7E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CCD6F5991F13604700A81644 /* SSAR_CameraARPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CC9346381F13936400271567 /* EntitiesDetail */ = {
+			isa = PBXGroup;
+			children = (
+				CC93463E1F13939F00271567 /* Cells */,
+				CC93463D1F13939600271567 /* Protocols */,
+				CC93463C1F13938E00271567 /* Presenter */,
+				CC93463B1F13938700271567 /* Interactor */,
+				CC93463A1F13938000271567 /* View */,
+				CC9346391F13937800271567 /* WireFrame */,
+			);
+			path = EntitiesDetail;
+			sourceTree = "<group>";
+		};
+		CC9346391F13937800271567 /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
+		CC93463A1F13938000271567 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC93463B1F13938700271567 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CC93463C1F13938E00271567 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CC93463D1F13939600271567 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CC93463E1F13939F00271567 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CCD6F5901F13579E00A81644 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CCD6F5911F1357B600A81644 /* SSAR_CameraARProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CCD6F5A11F136A4500A81644 /* Star */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Star;
+			sourceTree = "<group>";
+		};
+		CCD6F5A21F136A4F00A81644 /* Planet */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Planet;
+			sourceTree = "<group>";
+		};
+		CCD6F5A31F136A5400A81644 /* Satellite */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Satellite;
+			sourceTree = "<group>";
+		};
+		CCD6F5A41F13755000A81644 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CCD6F5A51F13756D00A81644 /* EntityCellTableViewCell.swift */,
+				CC9346361F13870800271567 /* EntityCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC19F69B1F1353CC006EDE7E /* SolarSystem AR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC19F6AE1F1353CC006EDE7E /* Build configuration list for PBXNativeTarget "SolarSystem AR" */;
+			buildPhases = (
+				CC19F6981F1353CC006EDE7E /* Sources */,
+				CC19F6991F1353CC006EDE7E /* Frameworks */,
+				CC19F69A1F1353CC006EDE7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SolarSystem AR";
+			productName = "SolarSystem AR";
+			productReference = CC19F69C1F1353CC006EDE7E /* SolarSystem AR.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC19F6941F1353CC006EDE7E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Fresneda;
+				TargetAttributes = {
+					CC19F69B1F1353CC006EDE7E = {
+						CreatedOnToolsVersion = 9.0;
+					};
+				};
+			};
+			buildConfigurationList = CC19F6971F1353CC006EDE7E /* Build configuration list for PBXProject "SolarSystem AR" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC19F6931F1353CC006EDE7E;
+			productRefGroup = CC19F69D1F1353CC006EDE7E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC19F69B1F1353CC006EDE7E /* SolarSystem AR */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC19F69A1F1353CC006EDE7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC9346371F13870800271567 /* EntityCell.xib in Resources */,
+				CCD6F59E1F13637600A81644 /* SSAR_CameraAR.storyboard in Resources */,
+				CC19F6AA1F1353CC006EDE7E /* LaunchScreen.storyboard in Resources */,
+				CC19F6A71F1353CC006EDE7E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC19F6981F1353CC006EDE7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCD6F5A61F13756D00A81644 /* EntityCellTableViewCell.swift in Sources */,
+				CCD6F5961F135CBA00A81644 /* SSAR_CameraARView.swift in Sources */,
+				CCD6F5941F135A6000A81644 /* CameraARWireFrame.swift in Sources */,
+				CCD6F5A01F1366D600A81644 /* StellarEntityModel.swift in Sources */,
+				CC19F6A01F1353CC006EDE7E /* AppDelegate.swift in Sources */,
+				CCD6F59A1F13604700A81644 /* SSAR_CameraARPresenter.swift in Sources */,
+				CCD6F59C1F1361C700A81644 /* SSAR_CameraARInteractor.swift in Sources */,
+				CCD6F5921F1357B600A81644 /* SSAR_CameraARProtocols.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CC19F6A81F1353CC006EDE7E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC19F6A91F1353CC006EDE7E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC19F6AC1F1353CC006EDE7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CC19F6AD1F1353CC006EDE7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC19F6AF1F1353CC006EDE7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UDL9VZGB88;
+				INFOPLIST_FILE = "SolarSystem AR/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fresneda.SolarSystem-AR";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC19F6B01F1353CC006EDE7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UDL9VZGB88;
+				INFOPLIST_FILE = "SolarSystem AR/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fresneda.SolarSystem-AR";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC19F6971F1353CC006EDE7E /* Build configuration list for PBXProject "SolarSystem AR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC19F6AC1F1353CC006EDE7E /* Debug */,
+				CC19F6AD1F1353CC006EDE7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC19F6AE1F1353CC006EDE7E /* Build configuration list for PBXNativeTarget "SolarSystem AR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC19F6AF1F1353CC006EDE7E /* Debug */,
+				CC19F6B01F1353CC006EDE7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC19F6941F1353CC006EDE7E /* Project object */;
+}
