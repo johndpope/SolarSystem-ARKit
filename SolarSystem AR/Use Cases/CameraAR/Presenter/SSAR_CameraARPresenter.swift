@@ -15,11 +15,13 @@ class SSAR_CameraARPresenter: SSAR_CameraARPresenterProtocol {
     var wireframe   : SSAR_CameraARWireFrameProtocol?
     
     func viewDidLoad() {
-        print("viewDidLoad")
+        self.view?.fillSolarSystem(with: StellarEntityModel.availableEntities)
+        self.view?.setupView()
+        self.view?.setupSceneView()
     }
     
     func showEntityDetails(for entity: StellarEntityModel) {
-        wireframe?.presentEntityDetailScreen(from: view!, forEntity: entity)
+        self.wireframe?.presentEntityDetailScreen(from: view!, forEntity: entity)
     }
     
 }

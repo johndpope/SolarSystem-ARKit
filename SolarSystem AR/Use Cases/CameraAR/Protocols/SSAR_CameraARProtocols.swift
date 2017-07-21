@@ -14,9 +14,12 @@ import UIKit
 protocol SSAR_CameraARViewProtocol : class{
     var presenter : SSAR_CameraARPresenterProtocol? {get set}
     
-    func showSolarSystem(with entities: [StellarEntityModel])    
+    func fillSolarSystem(with entities: [StellarEntityModel])
     
-    func showEntitiesTable()
+    func setupView()
+    func setupSceneView()
+    
+    func interactEntitiesTable()
     func resetExperience()
     func screenCapture()
 }
@@ -55,6 +58,5 @@ protocol SSAR_CameraARInteractorOutputProtocol : class{
 //--------------------------------
 protocol SSAR_CameraARInteractorInputProtocol : class{
     var presenter   : SSAR_CameraARPresenterProtocol? {get set}
-    
     //store data
 }

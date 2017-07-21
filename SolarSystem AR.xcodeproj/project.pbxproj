@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		264CBAA31F212497007113C2 /* Sun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264CBAA21F212497007113C2 /* Sun.swift */; };
+		264CBAA51F2124F0007113C2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264CBAA41F2124F0007113C2 /* Constants.swift */; };
 		CC19F6A01F1353CC006EDE7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC19F69F1F1353CC006EDE7E /* AppDelegate.swift */; };
 		CC19F6A71F1353CC006EDE7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC19F6A61F1353CC006EDE7E /* Assets.xcassets */; };
 		CC19F6AA1F1353CC006EDE7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC19F6A81F1353CC006EDE7E /* LaunchScreen.storyboard */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		264CBAA21F212497007113C2 /* Sun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sun.swift; sourceTree = "<group>"; };
+		264CBAA41F2124F0007113C2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CC19F69C1F1353CC006EDE7E /* SolarSystem AR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SolarSystem AR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC19F69F1F1353CC006EDE7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC19F6A61F1353CC006EDE7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				CC19F69F1F1353CC006EDE7E /* AppDelegate.swift */,
+				264CBAA41F2124F0007113C2 /* Constants.swift */,
 				CC19F6B41F1353F0006EDE7E /* Extensions */,
 				CC19F6B31F1353EB006EDE7E /* Entities */,
 				CC19F6B11F1353E1006EDE7E /* Use Cases */,
@@ -226,6 +231,7 @@
 		CCD6F5A11F136A4500A81644 /* Star */ = {
 			isa = PBXGroup;
 			children = (
+				264CBAA21F212497007113C2 /* Sun.swift */,
 			);
 			path = Star;
 			sourceTree = "<group>";
@@ -330,9 +336,11 @@
 				CCD6F5941F135A6000A81644 /* CameraARWireFrame.swift in Sources */,
 				CCD6F5A01F1366D600A81644 /* StellarEntityModel.swift in Sources */,
 				CC19F6A01F1353CC006EDE7E /* AppDelegate.swift in Sources */,
+				264CBAA51F2124F0007113C2 /* Constants.swift in Sources */,
 				CCD6F59A1F13604700A81644 /* SSAR_CameraARPresenter.swift in Sources */,
 				CCD6F59C1F1361C700A81644 /* SSAR_CameraARInteractor.swift in Sources */,
 				CCD6F5921F1357B600A81644 /* SSAR_CameraARProtocols.swift in Sources */,
+				264CBAA31F212497007113C2 /* Sun.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
