@@ -19,15 +19,14 @@ class StellarEntityModel : SCNNode{
     
     var entityName  : String?
     var entityImage : UIImage?
-    var size        : Float?
     var radius      : Float?
-    var density     : Float?
-    var gravity     : Float?
     var type        : typeStellarEntity?
     var shape       : shapeStellarEntity?
     var entityParent: StellarEntityModel?
     
     var entityDescription   : String?
+    
+    var modelLoaded : Bool = false
     
     override init() {
         super.init()
@@ -36,10 +35,7 @@ class StellarEntityModel : SCNNode{
     
     init(entityName: String,
          entityImage: UIImage,
-         size: Float,
          radius: Float,
-         density: Float,
-         gravity: Float,
          type: typeStellarEntity,
          shape: shapeStellarEntity,
          entityParent: StellarEntityModel? = nil,
@@ -49,10 +45,7 @@ class StellarEntityModel : SCNNode{
         
         self.entityName = entityName
         self.entityImage = entityImage
-        self.size = size
         self.radius = radius
-        self.density = density
-        self.gravity = gravity
         self.type = type
         self.shape = shape
         self.entityParent = entityParent
@@ -64,4 +57,36 @@ class StellarEntityModel : SCNNode{
         fatalError("init(coder:) has not been implemented")
     }
     
+    func loadModel(){
+        
+    }
+    func unloadModel() {
+        for child in self.childNodes {
+            child.removeFromParentNode()
+        }
+        
+        modelLoaded = false
+    }
+
+}
+
+extension StellarEntityModel{
+    static let availableEntities : [StellarEntityModel] = [
+        Sun()
+//        Mercury(),
+//        Venus(),
+//        Earth(),
+//        Mars(),
+//        Jupiter(),
+//        Saturn(),
+//        Uranus(),
+//        Neptune()
+    ]
+}
+
+struct CollisionCategory : OptionSet {
+    let rawValue: Int
+    
+    static let bottom = CollisionCategory(rawValue: 1 << 0)
+    static let cube = CollisionCategory(rawValue: 1 << 1)
 }

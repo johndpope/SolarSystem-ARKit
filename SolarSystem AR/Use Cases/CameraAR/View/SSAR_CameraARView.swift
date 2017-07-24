@@ -36,8 +36,6 @@ class SSAR_CameraARView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.presenter?.viewDidLoad()
-        self.setupView()
-        self.setupSceneView()
     }
 }
 
@@ -46,14 +44,18 @@ class SSAR_CameraARView: UIViewController {
 //------------------------------------------
 extension SSAR_CameraARView{
     func setupView(){
-        self.entitiesTableView.delegate = self
         self.sceneView.delegate = self
         
         self.fxBackgroundView.layer.cornerRadius = self.fxBackgroundView.frame.height/2
         self.fxBackgroundView.clipsToBounds = true
         
+        self.entitiesTableView.delegate = self
+        self.entitiesTableView.dataSource = self
+        self.entitiesTableView.register(UINib.init(nibName: "EntityCell", bundle: nil), forCellReuseIdentifier: "EntityCell")
+        self.entitiesTableView.estimatedRowHeight = 50
         self.entitiesTableView.layer.cornerRadius = self.fxBackgroundView.frame.height/2
         self.entitiesTableView.clipsToBounds = true
+        
     }
     
     func setupSceneView(){
@@ -97,26 +99,33 @@ extension SSAR_CameraARView{
     }
     
     @IBAction func showEntitiesTable(_ sender: Any){
-        self.showEntitiesTable()
+        self.interactEntitiesTable()
     }
 }
+
 //------------------------------------------
 //  MARK: - SSAR_CameraARView Protocol
 //------------------------------------------
 extension SSAR_CameraARView : SSAR_CameraARViewProtocol{
-    func showEntitiesTable() {
+    
+    //Show & hide a list of available entities
+    func interactEntitiesTable() {
+        self.entitiesTableView.reloadData()
+
         UIView.animate(withDuration: 0.3, animations: {
+            self.entitiesTableView.isHidden = !self.entitiesTableView.isHidden
             self.resetExperienceButton.isHidden = !self.resetExperienceButton.isHidden
             self.screenCaptureButton.isHidden = !self.screenCaptureButton.isHidden
-            self.entitiesTableView.isHidden = !self.entitiesTableView.isHidden
             
         }, completion: nil)
     }
     
+    //Clean all nodes in scene view
     func resetExperience() {
         print("Reset Experience")
     }
     
+    //Get a snapshot from scene view and try to save it on photos album
     func screenCapture() {
         guard self.screenCaptureButton.isEnabled else {
             return
@@ -151,7 +160,7 @@ extension SSAR_CameraARView : SSAR_CameraARViewProtocol{
         }
     }
     
-    func showSolarSystem(with entities: [StellarEntityModel]) {
+    func fillSolarSystem(with entities: [StellarEntityModel]) {
         self.stellarEntities = entities
     }
 }
@@ -161,6 +170,43 @@ extension SSAR_CameraARView : SSAR_CameraARViewProtocol{
 //------------------------------------------
 extension SSAR_CameraARView : ARSCNViewDelegate{
     
+    //Create floor nodes when ARKit detect a plane
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        guard let planeAnchor = anchor as? ARPlaneAnchor else{ return }
+        
+        let newPlane = SCNPlane.init(width: CGFloat(planeAnchor.extent.x), height: CGFloat(planeAnchor.extent.z))
+        
+        let planeNode = SCNNode.init(geometry: newPlane)
+        planeNode.position = SCNVector3.init(planeAnchor.center.x, 0, planeAnchor.center.z)
+        planeNode.transform = SCNMatrix4MakeRotation(-Float.pi/2, 1, 0, 0)
+        
+        node.addChildNode(planeNode)
+    }
+    
+    //When a plane node is updated, remove all existing plane nodes and create a new one with
+    //the new anchor
+    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+        guard let planeAnchor = anchor as? ARPlaneAnchor else{ return }
+        
+        // Remove existing plane nodes
+        node.enumerateChildNodes {
+            (childNode, _) in
+            childNode.removeFromParentNode()
+        }
+
+//        let planeNode = createPlaneNode(anchor: planeAnchor)
+//
+//        node.addChildNode(planeNode)
+    }
+    
+    //Remove existing plane nodes
+    func renderer(_ renderer: SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
+
+        node.enumerateChildNodes {
+            (childNode, _) in
+            childNode.removeFromParentNode()
+        }
+    }
 }
 
 //------------------------------------------
@@ -174,7 +220,7 @@ extension SSAR_CameraARView : UITableViewDelegate, UITableViewDataSource{
     
     @available(iOS 2.0, *)
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EntityCell", for: indexPath) as! EntityCellTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EntityCell") as! EntityCellTableViewCell
         
         let entity = self.stellarEntities[indexPath.row]
         cell.set(forEntity: entity)
@@ -185,6 +231,8 @@ extension SSAR_CameraARView : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.presenter?.showEntityDetails(for: self.stellarEntities[indexPath.row])
     }
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return self.entitiesTableView.frame.height
+    }
     
 }
